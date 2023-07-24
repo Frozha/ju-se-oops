@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//test
 int main(){
 	int a,b;
 	cout<<"Input first number - ";
