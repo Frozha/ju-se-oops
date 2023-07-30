@@ -1,14 +1,6 @@
 #include<iostream>
 using namespace std;
 
-//this is call by address not refrence
-//redo this with refrence
-void swap(int *a,int *b){
-	cout<<"\nSwapping by address\n";
-	int c = *a;
-	*a = *b;
-	*b=c;
-}
 
 void swap(int &a,int &b){
 	cout<<"\nSwapping by reference\n";
