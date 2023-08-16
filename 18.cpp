@@ -7,7 +7,7 @@ class point{
         double y = 0;
         double z = 0; 
     public:
-        point(double a = 0,double b = 0, double c =0):x{a},y{b},z{c}{}
+        point(double a = 0,double b = 0, double c =0):x(a),y(b),z(c){}
         double distance(point origin = point()){
             double dist = sqrt(pow(x-origin.x,2)+pow(y-origin.y,2)+pow(z-origin.z,2));
             return dist;

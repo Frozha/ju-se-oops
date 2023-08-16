@@ -3,9 +3,9 @@ using namespace std;
 
 
 int main(){
-	float celcius,farenh;
-	for(celcius =0;celcius<=100;celcius++){
-		farenh = (9*celcius/5)+32;
+	for(int i =0;i<=100;i++){
+		float celcius = i;
+		float farenh = (9*celcius/5)+32;
 		cout<<celcius<<"C = "<<farenh<<"F\n";
 	}		
 	return 0;

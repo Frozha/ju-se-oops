@@ -18,7 +18,7 @@ int max(int *num_arr,int length){
 
 int main(){
     int arr[]={1,2,5,3};
-    int x{1},y{3},z{2};
+    int x(1),y(3),z(2);
     cout<<"max of variables  : "<<max(x,y,z);
     cout<<"\nmax of array : "<<max(arr,4);
 }

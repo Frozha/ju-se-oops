@@ -29,7 +29,7 @@ class wlan{
     public:
         point *coordinate;
         string uuid;
-	wlan(point* a, string id, double r):coordinate{a},uuid{id},range{r}{}
+	wlan(point* a, string id, double r){coordinate=a;uuid=id;range=r;}
         
         bool inrange(wlan *neighbor){
             double distance = coordinate->distance(neighbor->coordinate);
