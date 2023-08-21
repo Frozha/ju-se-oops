@@ -5,7 +5,7 @@ class Vector {
 private:
     int size;
     double* element;
-    double magnitude = 0;
+    double magnitude;
 
     void updatemagnitude() {
         for (int i = 0; i < size; i++) {

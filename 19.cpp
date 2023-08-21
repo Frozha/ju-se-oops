@@ -3,7 +3,7 @@ using namespace std;
 
 class rectangle{
     public:
-        rectangle(double l=0, double b=0):length{l},breadth{b}{}
+        rectangle(double l=0, double b=0):length(l),breadth(b){}
         double area(){
             return length*breadth;
         }

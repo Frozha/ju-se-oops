@@ -3,9 +3,9 @@
 using namespace std;
 class point{
     private:
-        double x = 0;
-        double y = 0;
-        double z = 0; 
+        double x ;
+        double y ;
+        double z ; 
     public:
         point(double a = 0,double b = 0, double c =0):x(a),y(b),z(c){}
         double distance(point origin = point()){
