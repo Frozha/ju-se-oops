@@ -2,8 +2,8 @@
 #include<ctime>
 using namespace std;
 
-inline int sum(int a,int b,int c){
-    return a+b+c;
+inline void sum(int &inline_sum,const int &a,const int &b,const int &c){
+     inline_sum = a + b + c;
 }
 
 int sum_(int a,int b,int c){
@@ -16,7 +16,7 @@ int main(){
     clock_t time_1,time_2,time_3;
     time_1=clock();
     for(int i=0;i<10000000;i++){
-	inline_sum=sum(x,y,z);
+	sum(inline_sum,x,y,z);
     }
     time_2= clock();
     for(int i=0;i<10000000;i++){

@@ -3,14 +3,13 @@
 using namespace std;
 #define cols 3
 #define rows 2
-void prints(vector<char> v_str){
-    int sizes = v_str.size();
-    for(int i=0;i<sizes;i++){
-        cout<<v_str[i];
+void prints(const char *c_str,const int length){
+    for(int i=0;i<length;i++){
+        cout<<c_str[i];
     }
 }
 
-void prints(char (*sentence)[cols]){
+void prints(const char (*sentence)[cols]){
     for(int i=0;i<rows;i++){
         for(int j=0;j<cols;j++){
             cout<<sentence[i][j];
@@ -23,12 +22,10 @@ int main(){
         {'a','b','c'},
         {'d','e','f'}
     };
-    vector<char> v;
-    v.push_back('g');
-    v.push_back('h');
-    v.push_back('i');
+
+    char v1[] = {'g','h','i'};
 
     prints(s);
-    prints(v);
+    prints(v1,3);
 
 }

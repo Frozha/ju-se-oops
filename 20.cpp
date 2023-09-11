@@ -6,30 +6,45 @@
 using namespace std;
 
 
-class point{
+class Point{
     private:
-    public:
-        double x ;
+        static Point origin;
+	    double x ;
         double y ;
         double z ; 
-        point(double a = 0,double b = 0, double c =0):x(a),y(b),z(c){}
-        double distance(point origin = point()){
-            double dist = sqrt(pow(x-origin.x,2)+pow(y-origin.y,2)+pow(z-origin.z,2));
-            return dist;
-        }
-		double distance(point *origin){
-			double dist = sqrt(pow(x-origin->x,2)+pow(y-origin->y,2)+pow(z-origin->z,2));
-			return dist;
-		}
+    public:
+        Point(double ,double , double);
+        double distance const(const Point = origin);
+	    double distance const(const Point* = &origin);
+	    friend class Wlan;
+        void randomize();
 };
 
-class wlan{
+Point Point::origin(0.0,0.0,0.0);
+
+Point::Point(double a,double b, double c):x(a),y(b),z(c){}
+
+Point::distance(const Point p2) const{
+double dist = sqrt(pow(x-p2.x,2)+pow(y-p2.y,2)+pow(z-p2.z,2));
+return dist;
+}
+
+Point::distance(const Point *p2) const{
+double dist = sqrt(pow(x-p2->x,2)+pow(y-p2->y,2)+pow(z-p2->z,2));
+return dist;
+}
+
+Point::randomize(){
+    
+}
+
+class Wlan{
     private:
         double range;
     public:
         point *coordinate;
         string uuid;
-		wlan(point* a, string id, double r){coordinate=a;uuid=id;range=r;}
+		Wlan(Point* a, string id, double r){coordinate=a;uuid=id;range=r;}
         
         bool inrange(wlan *neighbor){
             double distance = coordinate->distance(neighbor->coordinate);

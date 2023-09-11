@@ -3,7 +3,7 @@ using namespace std;
 
 const double PI = 3.141592;
 
-double area(double r){
+double area(const double r){
 	return PI*r*r;
 }
 

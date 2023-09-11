@@ -1,22 +1,27 @@
 #include<iostream>
 using namespace std;
 
-class rectangle{
+class Rectangle{
     public:
-        rectangle(double l=0, double b=0):length(l),breadth(b){}
-        double area(){
-            return length*breadth;
-        }
+        Rectangle(double, double);
+        double area() const;
+
     private:
-        double length;
-        double breadth;
+         double length;
+         double breadth;
 };
 
+Rectangle::Rectangle(double l, double b):length(l),breadth(b){}
+
+double Rectangle::area() const{
+	return length*breadth;
+}
+
 int main(){
-    rectangle r1(1,2);
-    rectangle r2(2,3);
-    rectangle r3(3,4);
-    rectangle r4(4,5);
+    Rectangle r1(1,2);
+    Rectangle r2(2,3);
+    Rectangle r3(3,4);
+    Rectangle r4(4,5);
     cout<<"area of rectangle 1 : "<<r1.area();
     cout<<"\narea of rectangle 2 : "<<r2.area();     
     cout<<"\narea of rectangle 3 : "<<r3.area();
