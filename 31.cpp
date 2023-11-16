@@ -1,46 +1,26 @@
-#include<iostream>
-#include<cmath>
+#include"31.h"
 
-namespace assignment{
-  class Complex{	
-        float real, img;
-	static Complex origin;
-    public:
-	Complex(float, float);
-	//void display();
-	Complex operator+(const &Complex other)const;
-	Complex operator-(const &Complex other)const;
-	Complex operator*(const &Complex other)const;
-	float magnitude()const{return(std::sqrt(real*real+img*img));}
-	Complex operator/(const &Complex other)const;
-	
-  };
-  Complex::Complex(float r, float i){real = r;img = i;}
-  Complex Complex::origin = Complex(0.0,0.0);
-  Complex Complex::operator+(const &Complex other)const{
-        float real_part = this->real+other.real;
-	float img_part = this->img+other.img;
-	return Complex(real_part, img_part);}
-  Complex Complex::operator-(const &Complex other)const{
-	float real_part = this->real-other.real;
-	float img_part = this->img-other.img;
-        return Complex(real_part,img_part);}
-  Complex Complex::operator*(const &Complex other)const{
-        float real_prod1 = (this->real*other.real);
-	float real_prod2 = this->img*other.img;
-	float img_prod1 = this->real*other.img;
-	float img_prod2 = this->img*other.real;
-	return Complex(real_prod1-real_prod2,img_prod1+img_prod2);}
-  Complex Complex::operator/(const &Complex other)const{
-	float real_prod1 = (this->real*other.real);
-	float real_prod2 = this->img*other.img;
-	float img_prod1 = (this->real*other.img);
-	float img prod2 = this->img*other.real;
-	float magn = other.magnitude;
-        return Complex((real_prod1+real_prod2)/magn,(-img_prod1+img+prod2)/magn;}
-};
+int main() {
 
-int main(){
-	assignment::Complex a(1.0, 2.0);
+    Complex c1(3, 4);
+    Complex c2(1, -2);
+    Complex c3;
+
+    std::cout << "Complex Number 1: " << c1 << std::endl;
+    std::cout << "Complex Number 2: " << c2 << std::endl;
+    std::cout << "Complex Number 3: " << c3 << std::endl;
+
+    Complex sum = c1 + c2;
+    Complex difference = c1 - c2;
+    Complex product = c1 * c2;
+    Complex quotient = c1 / c2;
+
+    std::cout << "Sum: " << sum << std::endl;
+    std::cout << "Difference: " << difference << std::endl;
+    std::cout << "Product: " << product << std::endl;
+    std::cout << "Quotient: " << quotient << std::endl;
+
+    Complex sqrtResult = c1.sqrt();
+    std::cout << "Square root of c1: " << sqrtResult << std::endl;
 }
 

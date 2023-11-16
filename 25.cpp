@@ -12,11 +12,11 @@ class complex{
 			img = i;
 		}
 		
-		float getReal(){
+		float getReal()const{
 			return real;
 		}
 		
-		float getImg(){
+		float getImg()const{
 			return img;
 		}
 		
@@ -28,7 +28,7 @@ class complex{
 			img = b;
 		}
 		
-		void disp(){
+		void disp()const{
 			cout<<real<<"+ i"<<img;
 		}
 		

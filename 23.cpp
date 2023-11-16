@@ -69,11 +69,15 @@ int main(){
     cout<<"Enter number of accounts to create : ";
     int n;
     cin>>n;
-    string temp_name; 
+    string temp_name;
+    cin.clear();
     for(int i=0;i<n;i++){
         rand_balance = distribution(generator);
         cout<<"Enter name for account number : "<<Savings_Account::global_ac_num<<"\n->";
-        fflush(stdin);
+        //fflush(stdin);
+        if(i==0){
+        cin.clear();
+        cin.ignore(1);}
         getline(cin,temp_name);
         Savings_Account *dummy = new Savings_Account(temp_name,rand_balance);
         accounts.push_back(dummy);

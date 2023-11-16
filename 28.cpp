@@ -1,5 +1,5 @@
-#include<string>
-
+#include<cstring>
+using std::string;
 struct Subject{
 	char* subject_name;
 };
