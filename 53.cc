@@ -1,6 +1,6 @@
 #include <iostream>
 #include"stack.h"
-
+#include<string>
 int main() {
         Stack myStack(3);
     try{

@@ -1,4 +1,5 @@
 #include<iostream>
+
 using namespace std;
 
 class queue{
@@ -27,6 +28,9 @@ class queue{
 				rear = (rear+1)%length;
 				return temp;
 			}
+      else{
+        return 0;
+      }
 		}
 		
 		void display() const{

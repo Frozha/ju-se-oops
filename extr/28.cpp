@@ -211,7 +211,8 @@ int generateRandomRollNumber(int minRoll, int maxRoll) {
 int main(){
   auto deptid = 1;
   auto deptname = "sample";
-  srand(time(NULL));
+  srand(static_cast<unsigned>(time(NULL)));
+
       std::vector<Subject*> department1Subjects = {&Subjects[0], &Subjects[1], &Subjects[2], &Subjects[3], &Subjects[4]};
       deptname = "Computer Science";
     Department d1(1,deptname, department1Subjects);

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdexcept>
-
+#include<string>
 class Motor {
 public:
     Motor() {

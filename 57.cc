@@ -1,6 +1,7 @@
 #include"complex.h"
 #include"stack.h"
 #include<iostream>
+#include<string>
 
 template<class T> void swap(T& variable1, T& variable2){
   const T temp = variable1;

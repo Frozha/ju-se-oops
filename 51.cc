@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdexcept>
-
+#include<string>
 int main() {
     try {
         int number;

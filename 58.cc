@@ -1,5 +1,6 @@
 #include <iostream>
 #include"complex.h"
+#include<string>
 template<class T> class Stack {
 private:
     T* elements;

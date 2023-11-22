@@ -1,6 +1,6 @@
 #include <iostream>
 #include"complex.h"
-
+#include<string>
 using std::cout;
 using std::string;
 

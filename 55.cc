@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <stdexcept>
-
+#include<string>
 class Vehicle {
 public:
     Vehicle(int initialPosition) : position(initialPosition) {}

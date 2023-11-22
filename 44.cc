@@ -49,7 +49,7 @@ class Triangle:public Shape2D{
         C = todegrees(acos((a * a + b * b - c * c) / (2 * a * b)));
         if(A+B+C>360.1 || A+B+C<359.9){
           std::cout<<"triangle cannot be formed.";
-          this->~Shape();
+          this->~Triangle();
         }
     }
 
