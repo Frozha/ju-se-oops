@@ -1,14 +1,11 @@
-#include<iostream>
+#include <iostream>
 #include<cmath>
-
 class Complex{	
 		float real, img;
 		static Complex origin;
 	public:
-		Complex():real(0),img(0){};
-		Complex(float a):real(a),img(0){};
-		Complex(float a, float b):real(a), img(b){}
-
+		Complex(float a=0, float b=0):real(a), img(b){}
+    
 		float magnitude()const{return(std::sqrt(real*real+img*img));}
 		Complex sqrt() const;
 
@@ -16,9 +13,11 @@ class Complex{
 		Complex operator-(const Complex &)const;
 		Complex operator*(const Complex &)const;
 		Complex operator/(const Complex &)const;
-
+    
 		friend std::ostream& operator<<(std::ostream&, Complex&);
 		friend std::istream& operator>>(std::istream&, Complex&);		
+    
+    bool operator>=(const Complex &) const;
 };	
 
 std::ostream& operator<<(std::ostream& os, Complex &obj){
@@ -65,3 +64,6 @@ Complex Complex::sqrt() const{
     float temp2 = (img >= 0 ? 1 : -1) * std::sqrt((-real + std::sqrt(real * real + img * img)) / 2);
 return Complex(temp1, temp2);}
 
+bool Complex::operator>=(const Complex& obj2)const{
+  return this->magnitude()>=obj2.magnitude()?true:false;
+}
